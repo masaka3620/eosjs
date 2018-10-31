@@ -1,3 +1,6 @@
+/**
+ * @module API-Interfaces
+ */
 // copyright defined in eosjs/LICENSE.txt
 
 import { Abi } from "./eosjs-rpc-interfaces";
