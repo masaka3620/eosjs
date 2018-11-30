@@ -15,4 +15,4 @@ deploy:
     script: 
       - ./scripts/publish.sh
     on: 
-      branch: develop
+      branch: demo
