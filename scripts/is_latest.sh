@@ -10,6 +10,7 @@ latest_tag="${arry[0]}"
 if [ "$latest_tag" == "" ]; then 
     latest_tag="v0.0.0";
 else
+    git branch --contains tags/${latest_tag}
     tag_commit="$(git rev-list -n 1 ${latest_tag})";
     if [ "$tag_commit" = "$current_commit" ]; then
         is_latest=true;
