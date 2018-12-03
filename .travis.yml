@@ -1,3 +1,6 @@
+env:
+  global:
+    PUBLISH_NPM_LATEST_FROM="master-releases"
 sudo: false
 language: node_js
 node_js:
@@ -7,7 +10,7 @@ before_install:
   - yarn global add typescript
   - yarn global add webpack 
 before_script:
-  - source ./scripts/is_latest.sh $PUBLISH_NPM_LATEST_FROM
+  - source ./scripts/is_latest.sh
 script:
   - yarn run lint
   - yarn run test
@@ -21,7 +24,7 @@ deploy:
   - provider: script
     skip_cleanup: true
     script: 
-      - ./scripts/publish-tag.sh
+      - ./scripts/publish-tag.sh $PUBLISH_NPM_LATEST_FROM
     on: 
       tags: true
       condition: $TRAVIS_IS_LATEST_TAG = true # sourced from ./scripts/is_latest.sh
