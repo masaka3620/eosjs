@@ -1,4 +1,6 @@
-source ./publish-utils.sh
+#!/bin/bash
+
+. "./publish-utils.sh"
 
 if [[ "$TRAVIS_TAG" == "" ]]; then
   echo "No tag specified, skipping...";

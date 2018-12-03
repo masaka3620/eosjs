@@ -1,4 +1,6 @@
-source ./publish-utils.sh
+#!/bin/bash
+
+. "./publish-utils.sh"
 
 echo "Running on branch/tag ${TRAVIS_BRANCH}":
 
