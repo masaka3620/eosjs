@@ -6,6 +6,7 @@ tags="$(git tag --sort=-creatordate)";
 IFS='\n' read -ra arry <<< "$tags"
 
 latest_tag="${arry[0]}"
+tagged_branch=""
 
 if [ "$latest_tag" == "" ]; then 
     latest_tag="v0.0.0";
