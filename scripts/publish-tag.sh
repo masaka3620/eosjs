@@ -18,7 +18,7 @@ else
   echo "Pushing to git"
   git commit -a -m "Publishing version ${TRAVIS_TAG} [skip ci]"
 
-  git push origin HEAD:master  
+  git push origin HEAD:master-releases
 
   echo "Build and Publish to NPM"
 
