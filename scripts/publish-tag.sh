@@ -1,6 +1,6 @@
-source ./scripts/publish-utils.sh
+source ./publish-utils.sh
 
-if [ "$TRAVIS_TAG" == "" ]; then
+if [[ "$TRAVIS_TAG" == "" ]]; then
   echo "No tag specified, skipping...";
 else
   echo "Running on branch/tag ${TRAVIS_TAG}":
