@@ -1,6 +1,6 @@
 {
   "name": "@blockone/eosjs",
-  "version": "20.0.0-beta2",
+  "version": "21.0.0",
   "description": "Talk to eos API",
   "main": "dist/index.js",
   "scripts": {
