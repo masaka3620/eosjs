@@ -1,6 +1,3 @@
-env:
-  global:
-    PUBLISH_NPM_LATEST_FROM="master-releases"
 sudo: false
 language: node_js
 node_js:
