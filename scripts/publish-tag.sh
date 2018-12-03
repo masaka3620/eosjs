@@ -27,11 +27,11 @@ else
   cp .npmrc.template $HOME/.npmrc 
 
   if [[ "$TRAVIS_TAG" == *"-beta"* ]]; then
-    echo "Publishing with beta tag to npm (jk, it's commented out)"
-    #npm publish --tag beta
+    echo "Publishing with beta tag to npm"
+    npm publish --tag beta
   else
-    echo "Publishing with latest tag to npm (jk it's commented out)"
-    #npm publish
+    echo "Publishing with latest tag to npm"
+    npm publish
   fi
 fi
 
